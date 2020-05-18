@@ -24,7 +24,6 @@ window.addEventListener("load",()=>{
         })
     }
     let getInfo = (json)=>{
-        console.log(json);
         let currentTemperature = json.main.temp;
         let tempFa = (currentTemperature-273.15) * 9/5 + 32
         tempFa = Math.round(tempFa);
@@ -38,7 +37,6 @@ window.addEventListener("load",()=>{
         //icons
        let getCurrentIcon = json.weather[0].icon;
        let finalUrl = `${url}${getCurrentIcon}@2x.png`;
-       console.log(finalUrl);
        let img = document.createElement("img");
        img.src = finalUrl;
        getIcon.appendChild(img);
